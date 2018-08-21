@@ -312,6 +312,53 @@ a {
 </style>
 </head>
 
+<!-- 
+
+    Below is a user profile, JSON is what I have used in terms of formatting the informaation.
+    By using JSON and Jinja (http://jinja.pocoo.org/docs/2.10/) I am able to manipulate the data and loop over it so provide the revelat information, stored in variables.
+    
+    Keys such as, email address, language, tier and gender are all dynamic and will change based on the user profile, the information 
+    about the products will also be updated depending on the infomration sourced from the user.
+    
+    Here is an example of a Female product(s) list 
+
+       {
+            "productid": "10057911",
+            "productname": "natural wax candle",
+            "brand": "FORNASETTI",
+            "gender": "WOMEN",
+            "pictureurl": "https://cdn-images.farfetch.com/10/05/79/11/10057911_387848_200.jpg",
+            "producturl": "https://www.farfetch.com/shopping/item10057911.aspx",
+            "onsale": "no"
+
+        }, 
+
+
+-->
+
+
+{% 
+    set data =   {  
+       "emailaddress":"g10032@qq.com",
+       "language":"FR",
+       "tier":"GOLD",
+       "gender":"m",
+       "products":[  
+          {  
+             "productid":"10035870",
+             "productname":"Sunga preta modelo shorts",
+             "brand":"AMIR SLAMA",
+             "gender":"MEN",
+             "pictureurl":"https://cdn-images.farfetch-contents.com/10/03/58/70/10035870_440807_200.jpg",
+             "producturl":"https://www.farfetch.com/shopping/item10035870.aspx",
+             "onsale":"yes"
+          },
+ 
+       ]
+    }   
+ %}
+
+
 <body id="bodycontainer" style="-moz-box-sizing: border-box; -ms-text-size-adjust: 100%; -webkit-box-sizing: border-box; -webkit-text-size-adjust: 100%; box-sizing: border-box; color: #000000; font-family: 'Polaris', Arial, Helvetica, sans-serif; font-size: 14px; font-weight: normal; line-height: 1.3; margin: 0; min-width: 100%; padding: 0; text-align: left; width: 100% !important">
     <!-- Below are the different preheader translations-->
     <span class="preheader" style="color: #f2f2f2; display: none !important; font-size: 1px; line-height: 1px; max-height: 0px; max-width: 0px; mso-hide: all !important; opacity: 0; overflow: hidden; visibility: hidden">
@@ -358,51 +405,6 @@ a {
 
 </td></tr></tbody></table> 
 <table align="center" class="container float-center" style="background: #fefefe; float: none; margin: 0 auto; text-align: center; width: 640px"><tbody><tr><td>
-<!-- 
-
-    Below is a user profile, JSON is what I have used in terms of formatting the informaation.
-    By using JSON and Jinja (http://jinja.pocoo.org/docs/2.10/) I am able to manipulate the data and loop over it so provide the revelat information, stored in variables.
-    
-    Keys such as, email address, language, tier and gender are all dynamic and will change based on the user profile, the information 
-    about the products will also be updated depending on the infomration sourced from the user.
-    
-    Here is an example of a Female product(s) list 
-
-       {
-            "productid": "10057911",
-            "productname": "natural wax candle",
-            "brand": "FORNASETTI",
-            "gender": "WOMEN",
-            "pictureurl": "https://cdn-images.farfetch.com/10/05/79/11/10057911_387848_200.jpg",
-            "producturl": "https://www.farfetch.com/shopping/item10057911.aspx",
-            "onsale": "no"
-
-        }, 
-
-
--->
-
-
-{% 
-    set data =   {  
-       "emailaddress":"g10032@qq.com",
-       "language":"FR",
-       "tier":"GOLD",
-       "gender":"m",
-       "products":[  
-          {  
-             "productid":"10035870",
-             "productname":"Sunga preta modelo shorts",
-             "brand":"AMIR SLAMA",
-             "gender":"MEN",
-             "pictureurl":"https://cdn-images.farfetch-contents.com/10/03/58/70/10035870_440807_200.jpg",
-             "producturl":"https://www.farfetch.com/shopping/item10035870.aspx",
-             "onsale":"yes"
-          },
- 
-       ]
-    }   
- %}
 
 <table style="border-bottom: 1px solid; display: table; padding: 0; position: relative; width: 100%" class="row"><tbody><tr> 
     <th class="small-12 large-12 columns first last" style="font-weight: normal; margin: 0 auto; padding-bottom: 12px; padding-left: 16px; padding-right: 16px; text-align: center; width: 624px"><table style="width: 100%"><tr><th style="font-weight: normal; text-align: center">
